@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(30deg,#182c51,#09101a);
+    font-family: Poppins;
+}
+
+.moon {
+    background: linear-gradient(30deg,#13223f,#0e1a30);
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.moon::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #ffffff;
+    z-index: -1;
+    animation: cresent 3.2s linear infinite alternate;
+}
+
+@keyframes cresent {
+    0% {
+        transform: translate(-30px, 30px)scale(0.9);
+        box-shadow: none;
+    }
+    50% {
+        transform: translate(0px, 0px)scale(1.02);
+        box-shadow: 0 0 10px #f9f3f2,
+        0 0 80px 8px #ffffff;
+        background-color: #efdbd8;
+    }
+    100% {
+        transform: translate(30px, -30px)scale(0.9);
+        box-shadow: none;
+    }
+}
+
+/* Estilo para la sección 2 */
+.eclipse-section {
+    background: #09101a; /* Fondo blanco */
+    padding: 50px 0; /* Espaciado en la parte superior e inferior */
+}
+
+.eclipse-section h2 {
+    font-size: 24px; /* Tamaño del título */
+    color: #fff; /* Color del título */
+}
+
+.eclipse-section p {
+    font-size: 16px; /* Tamaño del texto */
+    color: #ccc; /* Color del texto */
+}
+
+/* Estilo de la tercera sección (Sección 3) */
+.other-section {
+    padding: 50px 0;
+}

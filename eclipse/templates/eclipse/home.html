@@ -1,8 +1,39 @@
+{% extends "eclipse/layout.html" %} {% block content %}
 
-{% extends "eclipse/layout.html" %}
+{% load static %}
 
-{% block content %}
+<div class="container-fluid">
+  <!-- Sección 1: Moon -->
+  <div class="moon-section vh-100 d-flex justify-content-center align-items-center">
+    <div class="moon"></div>
+  </div>
 
-<h1>Hello World!</h1>
+<!-- Sección 2: ¿Qué es un Eclipse? -->
+<div class="eclipse-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2>¿Qué es un Eclipse?</h2>
+          <p>
+            Un eclipse es un fenómeno astronómico en el que un cuerpo celeste se
+            encuentra temporalmente en la sombra de otro cuerpo celeste...
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Sección 3: Otra sección -->
+  <div class="other-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <!-- Contenido de la tercera sección aquí -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
